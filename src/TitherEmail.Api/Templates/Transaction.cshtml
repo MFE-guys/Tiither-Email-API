@@ -1,0 +1,46 @@
+﻿@model dynamic
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css"
+    />
+  </head>
+  <body>
+    <div class="columns">
+      <div
+        class="
+          column
+          is-full is-flex is-justify-content-center is-align-content-center
+        "
+        style="background-color: green; color: white; margin: 12px"
+      >
+        <p class="is-size-3">Transação</p>
+      </div>
+    </div>
+    <div class="container">
+      <h2>Foi cadastrada uma nova transação</h2>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Tipo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>@Model.User</td>
+              <td>@Model.Description</td>
+              <td>R$ @Model.Amount</td>
+              <td>@Model.Type</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
